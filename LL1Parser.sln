@@ -7,6 +7,8 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "LL1Parser", "LL1Parser\LL1P
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "FirstFollowParser", "FirstFollowParser\FirstFollowParser.csproj", "{7D661C69-20A6-4DED-A82D-1A28259428A2}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ParserTests", "ParserTests\ParserTests.csproj", "{278FA370-00CA-4216-8D77-29CB6320F6D3}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -21,6 +23,10 @@ Global
 		{7D661C69-20A6-4DED-A82D-1A28259428A2}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{7D661C69-20A6-4DED-A82D-1A28259428A2}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{7D661C69-20A6-4DED-A82D-1A28259428A2}.Release|Any CPU.Build.0 = Release|Any CPU
+		{278FA370-00CA-4216-8D77-29CB6320F6D3}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{278FA370-00CA-4216-8D77-29CB6320F6D3}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{278FA370-00CA-4216-8D77-29CB6320F6D3}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{278FA370-00CA-4216-8D77-29CB6320F6D3}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE

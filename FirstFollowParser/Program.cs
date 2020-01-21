@@ -6,7 +6,11 @@ namespace FirstFollowParser
     {
         static void Main(string[] args)
         {
-            Console.WriteLine("Hello World!");
+            GrammarParser grammer = new GrammarParser(@"C:\Users\darkshot\source\repos\LL1Parser\ParserTests\Sample5.in");
+            Console.WriteLine(string.Join(",", grammer.nonTerminals));
+            Console.WriteLine(string.Join(",", grammer.terminals));
+            Console.WriteLine(grammer.grammer.Count);
+            Console.WriteLine();
         }
     }
 }

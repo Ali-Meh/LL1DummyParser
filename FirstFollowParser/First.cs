@@ -6,10 +6,10 @@ namespace FirstFollowParser
 {
 	public class First
 	{
-		public String variable;
-		public HashSet<String> setOfFirst = new HashSet<String>();
+		public string variable;
+		public HashSet<string> setOfFirst = new HashSet<string>();
 
-		public First(String variable, HashSet<String> setOfFirst)
+		public First(string variable, HashSet<string> setOfFirst)
 		{
 			variable = this.variable;
 			setOfFirst = this.setOfFirst;
@@ -28,10 +28,10 @@ namespace FirstFollowParser
 
 		public override string ToString()
 		{
-			return $"First( { variable } ) : [ { String.Join(", ", setOfFirst) } ]";
+			return $"First( { variable } ) : [ { string.Join(", ", setOfFirst) } ]";
 		}
 
-		public String printInFile()
+		public string printInFile()
 		{
 			return this.ToString();
 		}
