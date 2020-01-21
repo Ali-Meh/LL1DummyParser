@@ -11,8 +11,12 @@ namespace FirstFollowParser
 
 		public Follow(string variable, HashSet<string> setOfFollow)
 		{
-			variable = this.variable;
-			setOfFollow = this.setOfFollow;
+			this.variable = variable;
+			this.setOfFollow = setOfFollow;
+		}
+		public Follow(string variable)
+		{
+			this.variable = variable;
 		}
 
 		public Follow()

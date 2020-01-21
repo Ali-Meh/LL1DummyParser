@@ -33,27 +33,43 @@ namespace FirstFollowParser
                     rule.source = rawRule[0].Trim();
                     List<String> setOfProductions = new List<String>(rawRule[1].Split("|"));
                     rule.production = setOfProductions;
+
+                    nonTerminals.Add(rule.source);
+
+
                     foreach (var item in setOfProductions)
                     {
-                        foreach (var item2 in item)
+                        foreach (var item2 in item.Split(string.Join(",", nonTerminals).Split(","), StringSplitOptions.RemoveEmptyEntries))
                         {
-                            if (!Char.IsUpper(item2))
+                            if (!nonTerminals.Contains(item2)&&item2!="'")
                             {
-                                terminals.Add(item2.ToString());
+                                terminals.Add(item2);
                             }
                         }
                     }
-                    if (rule.source.Length == 1 && Char.IsUpper(rule.source[0]))
-                    {
-                        nonTerminals.Add(rule.source);
-                    }
-                    else
-                    {
-                        //# parse Error
-                    }
                     grammer.Add(rule);
-
                 }
+                foreach (var item in nonTerminals)
+                {
+                    if (terminals.Contains(item))
+                    {
+                        terminals.Remove(item);
+                    }
+                }
+                foreach (var rule in grammer)
+                {
+                    foreach (var item in rule.production)
+                    {
+                        foreach (var item2 in item.Split(string.Join(",", nonTerminals).Split(","), StringSplitOptions.None))
+                        {
+                            if (nonTerminals.Contains(item2)||item2=="")
+                            {
+                                terminals.Remove(item);
+                            }
+                        }
+                    }
+                }
+
             }
             catch (Exception e)
             {
