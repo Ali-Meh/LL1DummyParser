@@ -13,7 +13,7 @@ namespace FirstFollowParser
             Console.WriteLine();
             Console.WriteLine();
             Console.WriteLine();
-            var fifo = new FirstFollowParser(grammer);
+            var fifo = new FirstFollow(grammer);
             fifo.First();
             fifo.printFirst();
             Console.WriteLine();

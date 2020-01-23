@@ -5,12 +5,12 @@ using System.Text;
 
 namespace FirstFollowParser
 {
-    class FirstFollowParser
+    public class FirstFollow
     {
         public List<First> first = new List<First>();
         public List<Follow> follow = new List<Follow>();
         GrammarParser grammer;
-        public FirstFollowParser(GrammarParser grammer)
+        public FirstFollow(GrammarParser grammer)
         {
             this.grammer=grammer;
         }

@@ -9,10 +9,9 @@ namespace FirstFollowParser
         public List<Rule> grammer = new List<Rule>();
         public HashSet<string> nonTerminals = new HashSet<string>();
         public HashSet<string> terminals = new HashSet<string>();
-
+        public FirstFollow FIFO;
         public GrammarParser()
         {
-
         }
 
         public GrammarParser(string fileName)
@@ -77,6 +76,19 @@ namespace FirstFollowParser
             }
         }
 
+        public void parse()
+        {
+            FIFO = new FirstFollow(this);
+            FIFO.First();
+            FIFO.printFirst();
+            Console.WriteLine();
+            Console.WriteLine();
+            FIFO.Follow();
+            FIFO.PrintFollow();
+            Console.WriteLine();
+            Console.WriteLine();
+
+        }
         public void print()
         {
             Console.WriteLine(nonTerminals);
