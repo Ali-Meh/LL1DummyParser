@@ -7,10 +7,19 @@ namespace LL1Parser
     {
         static void Main(string[] args)
         {
-            GrammarParser grammer = new GrammarParser(@"C:\Users\darkshot\source\repos\LL1Parser\ParserTests\Sample5.in");
-            grammer.parse();
-            var table = new ParseTable(grammer);
+            GrammarParser grammar = new GrammarParser(@"C:\Users\darkshot\source\repos\LL1Parser\ParserTests\Sample5.in");
+            grammar.parse();
+            var table = new ParseTable(grammar);
             table.printTable();
+
+
+            InputLexer n = new InputLexer(@"C:\Users\darkshot\source\repos\LL1\FirstAndFollow\Input2.in", grammar);
+
+            Console.WriteLine("__________________________________________________________");
+            Console.WriteLine(string.Join(",", n.elements));
+            var output=Parser.parser(grammar, n.elements);
+            Parser.printOutput(output);
+            Console.WriteLine();
         }
     }
 }
